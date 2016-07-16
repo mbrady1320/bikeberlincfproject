@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Workspace</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <title>bike berlin</title>
+  
+  <!-- Stylesheets -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  
+  <!-- Typography -->
+  <link href='https://fonts.googleapis.com/css?family=Raleway|Montserrat' rel='stylesheet' type='text/css'>
+  <meta name="viewport" content="width=device-width, intital-scale=1">
+  
   <%= csrf_meta_tags %>
+
+
 </head>
+
 <body>
+  <nav>
+    <ul>
+      <li>Home</li>
+      <li>About</li>
+      <li>Contact</li>
+    </ul>
+  </nav>
 
-<%= yield %>
+  <%= yield %>
 
+  <footer>
+    &copy; 2015 Bike Berlin
+  </footer>
 </body>
-</html>

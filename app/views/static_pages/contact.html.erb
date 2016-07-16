@@ -1,0 +1,39 @@
+<div class="container" id="contact-container">
+  <div class="header" id="contact-header">
+    <h1>contact</h1>
+    <p>NEED TO CONTACT US? SHOOT US AN EMAIL!</p>
+  </div><!--/header-->
+    <%= flash[:notice] %>
+    <%= form_tag ("/static_pages/thank_you")do %>
+  
+    <div class="col-lg-6 col-sm-12" id="image">
+      <%= image_tag ("contactphoto.jpeg") %>
+    </div><!--/col-lg-6 col-sm-12-->
+  
+    <div class="col-lg-6 col-sm-12">
+      <form>
+      
+        <div class="form-group">
+          <%= label_tag :name, "name" %>
+          <%= text_field_tag :name, nil, class:"form-control", placeholder:"name", required:"required" %>
+        </div><!-- /form-group -->  
+      
+        <div class="form-group">
+          <%= label_tag :email, "email" %>
+          <%= text_field_tag :email, nil, class:"form-control", placeholder:"email", required:"required" %>
+        </div><!-- /form-group --> 
+      
+        <div class="form-group">
+          <%= label_tag :message, "message" %>
+          <%= text_area_tag :message, nil, class:"form-control", placeholder:"your message here", rows: 4 %>
+        </div><!-- /form-group -->
+      
+        <%= submit_tag "send" class: "btn btn-success" %>
+    
+      </form
+    </div><!--/col-lg-6 col-sm-12-->
+    <% end %>
+  
+  
+
+</div>
